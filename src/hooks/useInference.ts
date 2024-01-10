@@ -16,8 +16,30 @@ const loadImageBase64 = (file: Blob) => {
     });
 }
 
+
+interface Prediction {
+    x: number;
+    y: number;
+    width: number;
+    height: number;
+    confidence: number;
+    class: string;
+    class_id: number;
+}
+
+interface Image {
+    width: number;
+    height: number;
+}
+
+interface InferenceResponse {
+    time: number;
+    image: Image;
+    predictions: Prediction[];
+}
+
 export default function useInference(file: Blob | null) {
-    const [response, setResponse] = useState<AxiosResponse | undefined>(undefined)
+    const [response, setResponse] = useState<InferenceResponse | undefined>(undefined)
 
     useEffect(() => {
         async function loadAndPostImage() {
