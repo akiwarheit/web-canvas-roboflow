@@ -1,7 +1,7 @@
 "use client";
 
 import useInference from "@/hooks/useInference";
-import { List, ListItem } from "@tremor/react";
+import { Col, Grid, List, ListItem, ProgressBar } from "@tremor/react";
 import { ChangeEvent, useCallback, useContext, useEffect, useState } from "react";
 import BoundingBoxes from "./bb";
 import { QuarterContext, QuarterContextType } from "@/context/quarter";
@@ -40,16 +40,22 @@ export default function Upload({ quarter }: { quarter: string }) {
 
   return (
     <div>
-      {response && <BoundingBoxes key={`${quarter}-bb`} responseData={response} image={selectedFile} />}
+      {response && <Grid numItems={2} className="gap-6 mb-6" >
+        <Col>
+          <BoundingBoxes key={`${quarter}-bb`} responseData={response} image={selectedFile} />
+        </Col>
+        <Col>
+          <List className="mb-6">
+            {response.predictions.map(({ x, y, id, class: clazz, confidence }: any) => (
+              <ListItem key={`${quarter}${x}${y}${id}`}>
+                <span>{clazz}</span>
+                <span>{(confidence * 100).toFixed(2)}%</span>
+              </ListItem>
+            ))}
+          </List>
+        </Col>
+      </Grid>}
       <div className="mb-6" />
-      {response && <List className="mb-6">
-        {response.predictions.map(({ x, y, id, class: clazz, confidence }: any) => (
-          <ListItem key={`${quarter}${x}${y}${id}`}>
-            <span>{clazz}</span>
-            <span>{(confidence * 100).toFixed(2)}%</span>
-          </ListItem>
-        ))}
-      </List>}
       <input type="file" onChange={handleFileChange} />
     </div>
   );
