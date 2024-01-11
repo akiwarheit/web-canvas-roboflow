@@ -1,10 +1,11 @@
 "use client";
+import { Inference } from '@/hooks/useInference';
 import React from 'react';
 
 
 import { useEffect, useRef } from 'react';
 
-const BoundingBoxes = ({ responseData, image }: { responseData: any, image: any }) => {
+const BoundingBoxes = ({ responseData, image }: { responseData: Inference, image: any }) => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
 
     useEffect(() => {
@@ -28,7 +29,7 @@ const BoundingBoxes = ({ responseData, image }: { responseData: any, image: any 
 
                     ctx.drawImage(img, 0, 0, newWidth, newHeight);
 
-                    responseData.predictions.forEach((prediction: any) => {
+                    responseData.predictions.filter(pred => pred.class.startsWith('juul')).forEach((prediction: any) => {
                         const { x, y, width, height, class: clazz } = prediction;
                         // @TODO - fix this - i'm not sure why we need to scale it down to .9
                         const scaledWidth = width * (scaleFactor);

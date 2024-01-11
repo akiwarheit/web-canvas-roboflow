@@ -32,14 +32,14 @@ interface Image {
     height: number;
 }
 
-interface InferenceResponse {
+export interface Inference {
     time: number;
     image: Image;
     predictions: Prediction[];
 }
 
 export default function useInference(file: Blob | null) {
-    const [response, setResponse] = useState<InferenceResponse | undefined>(undefined)
+    const [response, setResponse] = useState<Inference | undefined>(undefined)
 
     useEffect(() => {
         async function loadAndPostImage() {
