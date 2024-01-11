@@ -31,10 +31,12 @@ const BoundingBoxes = ({ responseData, image }: { responseData: any, image: any 
                     responseData.predictions.forEach((prediction: any) => {
                         const { x, y, width, height, class: clazz } = prediction;
                         // @TODO - fix this - i'm not sure why we need to scale it down to .9
-                        const scaledX = x * (scaleFactor);
-                        const scaledY = y * (scaleFactor);
                         const scaledWidth = width * (scaleFactor);
                         const scaledHeight = height * (scaleFactor);
+
+                        const scaledX = (x * (scaleFactor) - (scaledWidth / 2));
+                        const scaledY = (y * (scaleFactor) - (scaledHeight / 2));
+
                         ctx.strokeStyle = "#FF0000";
                         ctx.lineWidth = 1;
                         ctx.strokeRect(scaledX, scaledY, scaledWidth, scaledHeight);
