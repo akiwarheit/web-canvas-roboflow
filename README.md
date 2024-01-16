@@ -1,3 +1,5 @@
-# Roboflow Inference to Web Canvas
+# Rendering Roboflow Inference to Web Canvas
 
-Test app. Built using tremor.so & Roboflow Inference.
+![Sample Dashboard](object_detection.gif)
+
+Test app. Built using `Next.js` & [Roboflow](https://roboflow.com/).
