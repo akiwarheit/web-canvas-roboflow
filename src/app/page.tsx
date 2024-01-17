@@ -4,6 +4,7 @@ import Upload from '@/components/upload';
 import { QuarterContext } from '@/context/quarter';
 import { StoreProgress, StoreProgressContext } from '@/context/store';
 import useProducts from '@/hooks/useProducts';
+import usePrograms from '@/hooks/usePrograms';
 import useStore, { Store } from '@/hooks/useStore';
 import { BadgeDelta, Card, Col, Flex, Grid, List, ListItem, Metric, ProgressCircle, Subtitle, Tab, TabGroup, TabList, TabPanel, TabPanels, Table, TableBody, TableCell, TableHead, TableHeaderCell, TableRow, Text, Title } from '@tremor/react';
 import { useEffect, useMemo, useState } from 'react';
@@ -32,14 +33,15 @@ function compareValues(value1: number, value2: number): ComparisonResult {
 
 export default function Home() {
   const stores = useStore()
+  const programs = usePrograms()
   const [store, setStore] = useState(stores[0])
+  const [program, setProgram] = useState(programs[0])
   const { title, msid, address1, address2, lat, lng } = store
 
   const [q1, setQ1] = useState<string[]>([]);
   const [q2, setQ2] = useState<string[]>([]);
   const [q3, setQ3] = useState<string[]>([]);
   const [q4, setQ4] = useState<string[]>([]);
-
   const [p, setP] = useState<StoreProgress[]>([])
 
   const products = useProducts()
@@ -90,9 +92,13 @@ export default function Home() {
         <QuarterContext.Provider value={{ q1, q2, q3, q4, setQ1, setQ2, setQ3, setQ4 }}>
           <Grid numItems={5} className='gap-6 min-h-screen'>
             <Col numColSpan={5}>
-              <Card>
-                <Title>Program ID: 28952</Title>
-                <Subtitle>Manufacturer: Juul</Subtitle>
+              <Card className='h-48 p-0 overflow-hidden'>
+                <div
+                  className="w-full h-full absolute p-6"
+                  style={{ backgroundImage: `url("${program.banner}")` }}>
+                  <Title>{program.mfg}</Title>
+                  <Subtitle>{program.id}</Subtitle>
+                </div>
               </Card>
             </Col>
             <Col numColSpan={1} >
