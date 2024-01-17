@@ -108,10 +108,10 @@ export default function Home() {
                   {stores.map((item: Store) => (
                     <ListItem key={item.title} className="cursor-pointer" onClick={() => setStore(item)}>
                       <Flex flexDirection="col" justifyContent="start" alignItems="start">
-                        <Text>
+                        <Text className={`${item.msid === msid ? "underline font-bold" : ""}`}>
                           {item.title}
                         </Text>
-                        <Text className='opacity-60'>{item.address1} {item.address2}</Text>
+                        <Text className={`opacity-60 ${item.msid === msid ? "underline font-bold" : ""}`}>{item.address1} {item.address2}</Text>
                       </Flex>
                       <ProgressCircle value={0} size="xs" >
                         <span className="text-xs text-gray-700 font-small">0%</span>
