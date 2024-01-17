@@ -4,4 +4,4 @@
     <img src="object_detection.gif" width="640" height="400" />
 </p>
 
-Test app. Built using `Next.js` & [Roboflow](https://roboflow.com/).
+Built using `Next.js`, Tailwind & [Roboflow](https://roboflow.com/).
