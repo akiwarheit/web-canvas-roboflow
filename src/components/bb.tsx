@@ -29,7 +29,7 @@ const BoundingBoxes = ({ responseData, image }: { responseData: Inference, image
 
                     ctx.drawImage(img, 0, 0, newWidth, newHeight);
 
-                    responseData.predictions.filter(pred => pred.class.startsWith('juul')).forEach((prediction: any) => {
+                    responseData.predictions.forEach((prediction: any) => {
                         const { x, y, width, height, class: clazz } = prediction;
                         // @TODO - fix this - i'm not sure why we need to scale it down to .9
                         const scaledWidth = width * (scaleFactor);

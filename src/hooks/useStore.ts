@@ -20,13 +20,28 @@ function convertLatLongToDMS(latitude: number, longitude: number): string {
 
     return latDMS + '\t' + longDMS;
 }
+
+export interface Store {
+    title: string;
+    name: string,
+    msid: number;
+    person: string;
+    address1: string;
+    address2: string;
+    latlng: number[]
+    lat: number;
+    lng: number;
+}
+
 export default function useStore() {
-    const { title, msid, address1, address2, person, lat, lng } = useMemo(() => {
-        const { name, msid, address1, address2, person, latlng } = stores[0]
-        const [lat, lng] = latlng
-        const [rlat, rlng] = convertLatLongToDMS(lat, lng).split("\t")
-        return { title: name, msid, address1, address2, person, lat: rlat, lng: rlng }
+    const resolvedStores = useMemo(() => {
+        return stores.map(({ name, msid, address1, address2, person, latlng }: Store) => {
+            const [lat, lng] = latlng
+            const [rlat, rlng] = convertLatLongToDMS(lat, lng).split("\t")
+
+            return { title: name, msid, address1, address2, person, lat: rlat, lng: rlng }
+        })
     }, [])
 
-    return { title, msid, address1, address2, person, lat, lng }
+    return resolvedStores
 }

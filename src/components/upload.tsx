@@ -28,7 +28,7 @@ export default function Upload({ quarter }: { quarter: string }) {
   const response = useInference(selectedFile)
 
   useEffect(() => {
-    const classes = response?.predictions.filter(pred => pred.class.startsWith('juul')).map(pred => pred.class) as string[]
+    const classes = response?.predictions.map(pred => pred.class) as string[]
     setForQuarter(classes)
   }, [response, setForQuarter])
 
@@ -46,7 +46,7 @@ export default function Upload({ quarter }: { quarter: string }) {
         </Col>
         <Col>
           <List className="mb-6">
-            {response.predictions.filter(pred => pred.class.startsWith('juul')).map(({ x, y, id, class: clazz, confidence }: any) => (
+            {response.predictions.map(({ x, y, id, class: clazz, confidence }: any) => (
               <ListItem key={`${quarter}${x}${y}${id}`}>
                 <span>{clazz}</span>
                 <span>{(confidence * 100).toFixed(2)}%</span>
@@ -55,8 +55,7 @@ export default function Upload({ quarter }: { quarter: string }) {
           </List>
         </Col>
       </Grid>}
-      <div className="mb-6" />
-      <input type="file" onChange={handleFileChange} />
+      <input type="file" onChange={handleFileChange} accept="image/*" />
     </div>
   );
 }
