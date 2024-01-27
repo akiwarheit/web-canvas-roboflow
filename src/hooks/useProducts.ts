@@ -1,5 +1,6 @@
+import { Program } from "./usePrograms";
 
-interface Products {
+interface Product {
     mbid: number;
     description: string;
     pack: string;
@@ -9,6 +10,6 @@ interface Products {
 
 const products = require('@/mock/products.json')
 
-export default function useProducts() {
-    return products as Products[]
+export default function useProducts(program: Program) {
+    return products as Product[]
 }

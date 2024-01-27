@@ -33,9 +33,8 @@ function compareValues(value1: number, value2: number): ComparisonResult {
 
 export default function Home() {
   const stores = useStore()
-  const programs = usePrograms()
+  const program = usePrograms(28975)
   const [store, setStore] = useState(stores[0])
-  const [program, setProgram] = useState(programs[0])
   const { title, msid, address1, address2, lat, lng } = store
 
   const [q1, setQ1] = useState<string[]>([]);
@@ -78,13 +77,17 @@ export default function Home() {
 
   useEffect(() => {
     if (store && qOverview) {
-      const newP = [{
-        msid: store.msid,
-        progress: qOverview.map(v => v.val).reduce((p, c) => p + c) / qOverview.length * 100
-      }]
-      setP(newP)
+      if (!p.find((val) => { val.msid === store.msid })) {
+        const newP = [{
+          msid: store.msid,
+          progress: qOverview.map(v => v.val).reduce((p, c) => p + c) / qOverview.length
+        }]
+        console.log(newP)
+      } else {
+        console.log("Handle it here")
+      }
     }
-  }, [qOverview, store])
+  }, [p, qOverview, store])
 
   return (
     <main className="p-12 bg-white">

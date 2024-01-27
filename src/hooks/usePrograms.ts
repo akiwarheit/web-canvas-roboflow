@@ -1,5 +1,5 @@
 
-interface Program {
+export interface Program {
     id: number;
     mfg: string;
     banner: string;
@@ -7,6 +7,8 @@ interface Program {
 
 const programs = require('@/mock/programs.json')
 
-export default function useProducts() {
-    return programs as Program[]
+export default function useProducts(id: number) {
+    const program = programs.find((program: Program) => program.id === id)
+
+    return program
 }
