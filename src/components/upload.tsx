@@ -68,13 +68,13 @@ export default function Upload({ quarter }: { quarter: string }) {
   };
 
   return (
-    <div>
-      {response && <Grid numItems={2} className="gap-6 mb-6" >
+    <div className="space-y-6">
+      {response && <Grid numItems={2} className="gap-6" >
         <Col>
           <BoundingBoxes key={`${quarter}-bb`} responseData={response} image={selectedFile} />
         </Col>
         <Col>
-          <List className="mb-6">
+          <List>
             {response.predictions.map(({ x, y, id, class: clazz, confidence }: any) => (
               <ListItem key={`${quarter}${x}${y}${id}`}>
                 <span>{clazz}</span>

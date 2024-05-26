@@ -8,8 +8,20 @@ interface Product {
     cid: string;
 }
 
-const products = require('@/mock/kellanova-products.json')
+const kellanova = require('@/mock/kellanova-products.json')
+const juul = require("@/mock/products.json")
 
 export default function useProducts(program?: Program) {
-    return products as Product[]
+    if (!program) {
+        return kellanova as Product[]
+    }
+
+    switch (program.mfg) {
+        case "Juul Labs":
+            return juul as Product[]
+        case "Kellanova":
+            return kellanova as Product[]
+        default:
+            return kellanova as Product[]
+    }
 }
