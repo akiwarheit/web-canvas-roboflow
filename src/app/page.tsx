@@ -6,7 +6,7 @@ import { StoreProgress, StoreProgressContext } from '@/context/store';
 import useProducts from '@/hooks/useProducts';
 import usePrograms from '@/hooks/usePrograms';
 import useStore, { Store } from '@/hooks/useStore';
-import { BadgeDelta, Card, Col, Flex, Grid, List, ListItem, Metric, ProgressCircle, Subtitle, Tab, TabGroup, TabList, TabPanel, TabPanels, Table, TableBody, TableCell, TableHead, TableHeaderCell, TableRow, Text, Title } from '@tremor/react';
+import { Badge, BadgeDelta, Card, Col, Flex, Grid, List, ListItem, Metric, ProgressCircle, Subtitle, Tab, TabGroup, TabList, TabPanel, TabPanels, Table, TableBody, TableCell, TableHead, TableHeaderCell, TableRow, Text, Title } from '@tremor/react';
 import { useEffect, useMemo, useState } from 'react';
 
 type ComparisonResult = 'decrease' | 'moderateDecrease' | 'unchanged' | 'moderateIncrease' | 'increase';
@@ -33,7 +33,7 @@ function compareValues(value1: number, value2: number): ComparisonResult {
 
 export default function Home() {
   const stores = useStore()
-  const program = usePrograms(28975)
+  const program = usePrograms(28950)
   const [store, setStore] = useState(stores[0])
   const { title, msid, address1, address2, lat, lng } = store
 
@@ -140,9 +140,9 @@ export default function Home() {
                   <Card>
                     <Flex justifyContent="between" alignItems="center">
                       <Text>Q1 2024</Text>
-                      <BadgeDelta deltaType="unchanged" size="xs">
+                      <Badge>
                         {qOverview[0].val}%
-                      </BadgeDelta>
+                      </Badge>
                     </Flex>
                   </Card>
                 </Col>

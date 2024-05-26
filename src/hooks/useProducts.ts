@@ -8,8 +8,8 @@ interface Product {
     cid: string;
 }
 
-const products = require('@/mock/products.json')
+const products = require('@/mock/kellanova-products.json')
 
-export default function useProducts(program: Program) {
+export default function useProducts(program?: Program) {
     return products as Product[]
 }

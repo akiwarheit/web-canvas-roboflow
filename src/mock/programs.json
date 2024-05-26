@@ -1,0 +1,17 @@
+[
+    {
+        "id": 28950,
+        "mfg": "Kellanova",
+        "banner": "https://www.kellanova.com/content/dam/global/kellanova-company/images/home/card-grid-3.png"
+    },
+    {
+        "id": 28952,
+        "mfg": "Juul Labs",
+        "banner": "https://media.cnn.com/api/v1/images/stellar/prod/220625163739-01-juul-products-062322.jpg?c=16x9&q=h_653,w_1160,c_fill/f_webp"
+    },
+    {
+        "id": 28975,
+        "mfg": "Conagra",
+        "banner": "https://bravomiamivalley.com/6-11-2018-10-35-21-AM-7702843.jpg"
+    }
+]

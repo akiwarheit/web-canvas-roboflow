@@ -55,7 +55,20 @@ export default function Upload({ quarter }: { quarter: string }) {
           </List>
         </Col>
       </Grid>}
-      <input type="file" onChange={handleFileChange} accept="image/*" />
+      <div className="space-y-4 p-2">
+        <div>
+          <p className="text-black">When you upload an image using the file input below, the image will be sent to our image classifier model. The model will analyze the image and return predictions, which may include identifying objects, features, or other relevant classifications within the image. The results will be displayed along with the confidence levels of each prediction. Please ensure that the image is in a supported format (such as JPEG, PNG, etc.) before uploading.</p>
+        </div>
+        <div>
+          <span className="text-black">To upload an image:</span>
+        </div>
+        <ol className="text-black list-decimal ml-8">
+          <li>Click on the `Choose File` button.</li>
+          <li>Select an image file from your device.</li>
+          <li>The image will be automatically uploaded and processed by the classifier.</li>
+        </ol>
+        <input type="file" onChange={handleFileChange} accept="image/*" />
+      </div>
     </div>
   );
 }

@@ -1,0 +1,167 @@
+[
+    {
+        "msid": 1,
+        "name": "Unique Mart",
+        "address1": "123 Elm St",
+        "address2": "Greenfield",
+        "person": "Alice S",
+        "latlng": [
+            51.509231,
+            -0.065032
+        ]
+    },
+    {
+        "msid": 2,
+        "name": "Express Emporium",
+        "address1": "456 Oak Ave",
+        "address2": "Hillside",
+        "person": "Bob R",
+        "latlng": [
+            51.503712,
+            -0.070917
+        ]
+    },
+    {
+        "msid": 3,
+        "name": "Global Goods",
+        "address1": "789 Pine Blvd",
+        "address2": "Meadowview",
+        "person": "Charlie M",
+        "latlng": [
+            51.498927,
+            -0.076802
+        ]
+    },
+    {
+        "msid": 4,
+        "name": "City Corner Shop",
+        "address1": "101 Maple Ln",
+        "address2": "Woodland",
+        "person": "David L",
+        "latlng": [
+            51.494142,
+            -0.082687
+        ]
+    },
+    {
+        "msid": 5,
+        "name": "Prime Products",
+        "address1": "222 Birch Rd",
+        "address2": "Riverside",
+        "person": "Emma K",
+        "latlng": [
+            51.489357,
+            -0.088572
+        ]
+    },
+    {
+        "msid": 6,
+        "name": "Neighborhood Necessities",
+        "address1": "333 Walnut Dr",
+        "address2": "Sunset",
+        "person": "Frank P",
+        "latlng": [
+            51.484572,
+            -0.094457
+        ]
+    },
+    {
+        "msid": 7,
+        "name": "Swift Stores",
+        "address1": "444 Cedar Ct",
+        "address2": "Hilltop",
+        "person": "Grace Q",
+        "latlng": [
+            51.479787,
+            -0.100342
+        ]
+    },
+    {
+        "msid": 8,
+        "name": "Metro Marketplace",
+        "address1": "555 Redwood Pl",
+        "address2": "Valley View",
+        "person": "Henry N",
+        "latlng": [
+            51.475002,
+            -0.106227
+        ]
+    },
+    {
+        "msid": 9,
+        "name": "Pioneer Plaza",
+        "address1": "666 Spruce Lane",
+        "address2": "Pinecrest",
+        "person": "Ivy E",
+        "latlng": [
+            51.470217,
+            -0.112112
+        ]
+    },
+    {
+        "msid": 10,
+        "name": "Golden Groceries",
+        "address1": "777 Pinehurst Blvd",
+        "address2": "Maplewood",
+        "person": "Jack M",
+        "latlng": [
+            51.465432,
+            -0.117997
+        ]
+    },
+    {
+        "msid": 11,
+        "name": "Harmony Haven",
+        "address1": "888 Oakwood Ave",
+        "address2": "Blossom",
+        "person": "Kate F",
+        "latlng": [
+            51.460647,
+            -0.123882
+        ]
+    },
+    {
+        "msid": 12,
+        "name": "Zen Zone",
+        "address1": "999 Maple Ridge Dr",
+        "address2": "Crescent",
+        "person": "Leo H",
+        "latlng": [
+            51.455862,
+            -0.129767
+        ]
+    },
+    {
+        "msid": 13,
+        "name": "Nature's Nook",
+        "address1": "111 Pine Lane",
+        "address2": "Sunnydale",
+        "person": "Mia J",
+        "latlng": [
+            51.451077,
+            -0.135652
+        ]
+    },
+    {
+        "msid": 14,
+        "name": "Vista Value",
+        "address1": "222 Birchwood Blvd",
+        "address2": "Lakeside",
+        "person": "Noah K",
+        "latlng": [
+            51.446292,
+            -0.141537
+        ]
+    },
+    {
+        "msid": 15,
+        "name": "Serenity Shop",
+        "address1": "333 Oakridge Rd",
+        "address2": "Springfield",
+        "person": "Olivia L",
+        "latlng": [
+            51.441507,
+            -0.147422
+        ]
+    }
+]

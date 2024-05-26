@@ -1,0 +1,93 @@
+[
+    {
+        "mbid": "1",
+        "description": "Cheez-It Duoz Sharp Cheddar/Parmesan",
+        "pack": "8.6 oz",
+        "UPC": "024100234567",
+        "cid": "Cheez-It-Duoz-Sharp-Cheddar/Parmesan"
+    },
+    {
+        "mbid": "2",
+        "description": "Cheez-It Original",
+        "pack": "12.4 oz",
+        "UPC": "024100567890",
+        "cid": "Cheez-It-Original"
+    },
+    {
+        "mbid": "3",
+        "description": "Cheez-It White Cheddar",
+        "pack": "12.4 oz",
+        "UPC": "024100678901",
+        "cid": "Cheez-It-White-Cheddar"
+    },
+    {
+        "mbid": "4",
+        "description": "Pringles BBQ",
+        "pack": "5.5 oz",
+        "UPC": "038000321456",
+        "cid": "Pringles-BBQ"
+    },
+    {
+        "mbid": "5",
+        "description": "Pringles Cheddar Cheese",
+        "pack": "5.5 oz",
+        "UPC": "038000567123",
+        "cid": "Pringles-Cheddar-Cheese"
+    },
+    {
+        "mbid": "6",
+        "description": "Pringles Crisps Original",
+        "pack": "5.5 oz",
+        "UPC": "038000678234",
+        "cid": "Pringles-Crisps-Original"
+    },
+    {
+        "mbid": "7",
+        "description": "Pringles Grab N Go BBQ",
+        "pack": "2.5 oz",
+        "UPC": "038000345678",
+        "cid": "Pringles-Grab-N-Go-BBQ"
+    },
+    {
+        "mbid": "8",
+        "description": "Pringles Grab N Go Cheddar Cheese",
+        "pack": "2.5 oz",
+        "UPC": "038000456789",
+        "cid": "Pringles-Grab-N-Go-Cheddar-Cheese"
+    },
+    {
+        "mbid": "9",
+        "description": "Pringles Grab N Go Original",
+        "pack": "2.5 oz",
+        "UPC": "038000567890",
+        "cid": "Pringles-Grab-N-Go-Original"
+    },
+    {
+        "mbid": "10",
+        "description": "Pringles Grab N Go Sour Cream & Onion",
+        "pack": "2.5 oz",
+        "UPC": "038000678901",
+        "cid": "Pringles-Grab-N-Go-Sour-Cream-Onion"
+    },
+    {
+        "mbid": "11",
+        "description": "Pringles Pizza",
+        "pack": "5.5 oz",
+        "UPC": "038000123456",
+        "cid": "Pringles-Pizza"
+    },
+    {
+        "mbid": "12",
+        "description": "Pringles Salt & Vinegar",
+        "pack": "5.5 oz",
+        "UPC": "038000234567",
+        "cid": "Pringles-Salt-&-Vinegar"
+    },
+    {
+        "mbid": "13",
+        "description": "Pringles Sour Cream & Onion",
+        "pack": "5.5 oz",
+        "UPC": "038000345678",
+        "cid": "Pringles-Sour-Cream-&-Onion"
+    }
+]

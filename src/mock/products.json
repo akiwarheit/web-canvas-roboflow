@@ -1,0 +1,65 @@
+[
+    {
+        "mbid": 700234,
+        "description": "JUUL PODS 5% MENTHOL 4PK 2.8 ML",
+        "pack": "Bx -8",
+        "upc": 210380,
+        "cid": "juul_menthol_5ns_4p"
+    },
+    {
+        "mbid": 700128,
+        "description": "JUUL PODS 5% VIRGINIA TOBACCO 4PK 2.8 ML",
+        "pack": "Bx -8",
+        "upc": 126410,
+        "cid": "juul_vt_5ns_4p"
+    },
+    {
+        "mbid": 700232,
+        "description": "JUUL PODS 3% VIRGINIA TOBACCO 4PK 2.8 ML",
+        "pack": "Bx -8",
+        "upc": 224085,
+        "cid": "juul_vt_3ns_4p"
+    },
+    {
+        "mbid": 700888,
+        "description": "JUUL PODS 3% MENTHOL 4PK 2.8 ML",
+        "pack": "Bx -8",
+        "upc": 247774,
+        "cid": "juul_menthol_3ns_4p"
+    },
+    {
+        "mbid": 700453,
+        "description": "JUUL PODS 5% MENTHOL 2PK 1.4 ML",
+        "pack": "Bx -8",
+        "upc": 223965,
+        "cid": "juul_menthol_5ns_2p"
+    },
+    {
+        "mbid": 70043,
+        "description": "JUUL PODS 5% VIRGINIA TOBACCO 2PK 1.4 ML",
+        "pack": "Bx -8",
+        "upc": 223963,
+        "cid": "juul_vt_5ns_2p"
+    },
+    {
+        "mbid": 700343,
+        "description": "JUUL DEVICE KIT SLATE 1 CT",
+        "pack": "Bx -8",
+        "upc": 245219,
+        "cid": "juul_slate"
+    },
+    {
+        "mbid": 700265,
+        "description": "JUUL PODS 3% VIRGINIA TOBACCO 2PK 1.4 ML",
+        "pack": "Bx -8",
+        "upc": 235970,
+        "cid": "juul_vt_3ns_2p"
+    },
+    {
+        "mbid": 700338,
+        "description": "JUUL PODS 5% CLASSIC TOBACCO",
+        "pack": "2 pack",
+        "upc": 221222,
+        "cid": "juul_ct_5ns_2p"
+    }
+]
