@@ -47,7 +47,7 @@ export default function useInference(file: Blob | null) {
 
             axios({
                 method: "POST",
-                url: ENV.INFERENCE_URL,
+                url: `${ENV.INFERENCE_URL}?confidence=70`,
                 params: {
                     api_key: ENV.INFERENCE_API_KEY
                 },
@@ -66,6 +66,7 @@ export default function useInference(file: Blob | null) {
         }
 
         if (file !== null) {
+            setResponse(undefined)
             loadAndPostImage()
         }
     }, [file])
