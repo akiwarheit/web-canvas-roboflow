@@ -96,13 +96,16 @@ export default function Upload({ quarter }: { quarter: string }) {
           <li>Select an image file from your device.</li>
           <li>The image will be automatically uploaded and processed by the classifier.</li>
         </ol>
+        <div>
+          <p className="text-black">The <code>confidence</code> field allows users to specify a minimum confidence threshold, ensuring that only detections with a confidence score equal to or greater than the specified threshold are included in the final results.</p>
+        </div>
         <div className="flex-inline space-x-4 text-black">
           <label>Confidence:</label>
           <input type="number" onChange={handleOnConfidenceChange} placeholder="(1-100)" value={confidence} />
           <input type="file" onChange={handleFileChange} accept="image/*" />
-          {!response && selectedFile && <Loading />}
         </div>
       </div>
+      {!response && selectedFile && <Loading />}
     </div>
   );
 }
