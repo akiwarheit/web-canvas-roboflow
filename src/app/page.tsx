@@ -3,6 +3,7 @@
 import Upload from "@/components/upload";
 import { QuarterContext } from "@/context/quarter";
 import { StoreProgress, StoreProgressContext } from "@/context/store";
+import { useAssistant } from "@/hooks/useAssistant";
 import useProducts from "@/hooks/useProducts";
 import usePrograms from "@/hooks/usePrograms";
 import useStore, { Store } from "@/hooks/useStore";
@@ -31,7 +32,7 @@ import {
   Text,
   Title,
 } from "@tremor/react";
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 
 type ComparisonResult =
   | "decrease"
@@ -89,6 +90,8 @@ export default function Home() {
       q4: checkExists(product.cid, q4),
     }));
   }, [products, q1, q2, q3, q4]);
+
+  const { insight } = useAssistant(JSON.stringify(productsWithQuarter));
 
   const qOverview = useMemo(() => {
     const overview = [q1, q2, q3, q4].map((q, idx) => {
@@ -165,8 +168,8 @@ export default function Home() {
                 </List>
               </Card>
             </Col>
-            <Col numColSpan={4}>
-              <Card className="max-w-lg mb-6 bg-green-50">
+            <Col numColSpan={4} className="space-y-6">
+              <Card className="max-w-lg bg-green-50">
                 <Title>{title}</Title>
                 <Subtitle>MSID: {msid}</Subtitle>
                 <Text>{address1}</Text>
@@ -235,8 +238,18 @@ export default function Home() {
                   </Card>
                 </Col>
               </Grid>
+              {insight && (
+                <>
+                  <h1 className="font-medium text-tremor-title text-tremor-content-emphasis dark:text-dark-tremor-content-emphasis">
+                    Generated Summary
+                  </h1>
+                  <blockquote className="text-black border-l-4 border-blue-500 pl-4 italic">
+                    {insight}
+                  </blockquote>
+                </>
+              )}
               <TabGroup>
-                <TabList className="mt-8">
+                <TabList>
                   <Tab>Overview</Tab>
                   <Tab>Quarter 1</Tab>
                   <Tab>Quarter 2</Tab>

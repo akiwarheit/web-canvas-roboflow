@@ -156,14 +156,11 @@ export default function Upload({ quarter }: { quarter: string }) {
           </Col>
           <Col>
             <List>
-              {response.predictions.map(
-                ({ x, y, id, class: clazz, confidence }: any) => (
-                  <ListItem key={`${quarter}${x}${y}${id}`}>
-                    <span>{clazz}</span>
-                    <span>{(confidence * 100).toFixed(2)}%</span>
-                  </ListItem>
-                )
-              )}
+              {response.predictions.map(({ x, y, id, class: clazz }: any) => (
+                <ListItem key={`${quarter}${x}${y}${id}`}>
+                  <span>{clazz}</span>
+                </ListItem>
+              ))}
             </List>
           </Col>
         </Grid>
