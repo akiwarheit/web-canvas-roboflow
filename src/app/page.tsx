@@ -105,30 +105,8 @@ export default function Home() {
     return overview;
   }, [products.length, q1, q2, q3, q4]);
 
-  // useEffect(() => {
-  //   if (store && qOverview) {
-  //     if (
-  //       !p.find((val) => {
-  //         val.msid === store.msid;
-  //       })
-  //     ) {
-  //       const newP = [
-  //         {
-  //           msid: store.msid,
-  //           progress:
-  //             qOverview.map((v) => v.val).reduce((p, c) => p + c) /
-  //             qOverview.length,
-  //         },
-  //       ];
-  //       console.log(newP);
-  //     } else {
-  //       console.log("Handle it here");
-  //     }
-  //   }
-  // }, [p, qOverview, store]);
-
   return (
-    <main className="p-12 bg-white">
+    <main className="p-12 bg-blue-50">
       <StoreProgressContext.Provider
         value={{ storeProgress: p, setStoreProgress: setP }}
       >
@@ -137,7 +115,7 @@ export default function Home() {
         >
           <Grid numItems={5} className="gap-6 min-h-screen">
             <Col numColSpan={5}>
-              <Card className="h-48 p-0 overflow-hidden">
+              <Card className="h-48 p-0 overflow-hidden bg-green-50">
                 <div
                   className="w-full h-full absolute p-6"
                   style={{ backgroundImage: `url("${program.banner}")` }}
@@ -148,7 +126,7 @@ export default function Home() {
               </Card>
             </Col>
             <Col numColSpan={1}>
-              <Card className="h-full">
+              <Card className="h-full bg-green-50">
                 <Title>Store List</Title>
                 <List className="mt-2">
                   {stores.map((item: Store) => (
@@ -188,7 +166,7 @@ export default function Home() {
               </Card>
             </Col>
             <Col numColSpan={4}>
-              <Card className="max-w-lg mb-6">
+              <Card className="max-w-lg mb-6 bg-green-50">
                 <Title>{title}</Title>
                 <Subtitle>MSID: {msid}</Subtitle>
                 <Text>{address1}</Text>
@@ -201,7 +179,7 @@ export default function Home() {
               </Card>
               <Grid numItems={4} className="gap-6">
                 <Col numColSpan={1}>
-                  <Card>
+                  <Card className="bg-green-50">
                     <Flex justifyContent="between" alignItems="center">
                       <Text>Q1 2024</Text>
                       <Badge>{qOverview[0].val}%</Badge>
@@ -209,7 +187,7 @@ export default function Home() {
                   </Card>
                 </Col>
                 <Col numColSpan={1}>
-                  <Card>
+                  <Card className="bg-green-50">
                     <Flex justifyContent="between" alignItems="center">
                       <Text>Q2 2024</Text>
                       <BadgeDelta
@@ -225,7 +203,7 @@ export default function Home() {
                   </Card>
                 </Col>
                 <Col numColSpan={1}>
-                  <Card>
+                  <Card className="bg-green-50">
                     <Flex justifyContent="between" alignItems="center">
                       <Text>Q3 2024</Text>
                       <BadgeDelta
@@ -241,7 +219,7 @@ export default function Home() {
                   </Card>
                 </Col>
                 <Col numColSpan={1}>
-                  <Card>
+                  <Card className="bg-green-50">
                     <Flex justifyContent="between" alignItems="center">
                       <Text>Q4 2024</Text>
                       <BadgeDelta

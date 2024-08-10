@@ -199,11 +199,12 @@ export default function Upload({ quarter }: { quarter: string }) {
             are included in the final results.
           </p>
         </div>
-        <div className="flex-inline space-x-4 text-black">
-          <label>Confidence:</label>
+        <div className="flex-inline gap-4 text-black">
+          <label className="hidden">Confidence:</label>
           <input
             type="number"
             onChange={handleOnConfidenceChange}
+            className="hidden"
             placeholder="(1-100)"
             value={confidence}
           />
