@@ -23,6 +23,11 @@ export const useAssistant = (data?: string) => {
               "You provide insights and trend analysis for an on-shelf program. You are given a JSON object to interpret. Keep your insights short as there will be visualisations accompanying your answers displayed underneath. Make sure not to mention any technical jargons as this will be for non-technical people.",
           },
           {
+            role: "system",
+            content:
+              "You should not answer any questions unrelated to your role at providing insights and trend analysis on the data.",
+          },
+          {
             role: "user",
             content: `Given the JSON ${data} What products are missing?`,
           },
