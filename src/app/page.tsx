@@ -1,5 +1,6 @@
 "use client";
 
+import SnackList from "@/components/snacklist";
 import Upload from "@/components/upload";
 import { QuarterContext } from "@/context/quarter";
 import { StoreProgress, StoreProgressContext } from "@/context/store";
@@ -238,16 +239,7 @@ export default function Home() {
                   </Card>
                 </Col>
               </Grid>
-              {insight && (
-                <>
-                  <h1 className="font-medium text-tremor-title text-tremor-content-emphasis dark:text-dark-tremor-content-emphasis">
-                    Generated Summary
-                  </h1>
-                  <blockquote className="text-black border-l-4 border-blue-500 pl-4 italic">
-                    {insight}
-                  </blockquote>
-                </>
-              )}
+              {insight && <SnackList content={insight} />}
               <TabGroup>
                 <TabList>
                   <Tab>Overview</Tab>

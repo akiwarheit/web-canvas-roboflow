@@ -1,5 +1,6 @@
 import OpenAI from "openai";
 import { useEffect, useState } from "react";
+import useProducts from "./useProducts";
 
 const openai = new OpenAI({
   apiKey: process.env.NEXT_PUBLIC_OPEN_API_KEY,
@@ -8,6 +9,7 @@ const openai = new OpenAI({
 
 export const useAssistant = (data?: string) => {
   const [insight, setInsight] = useState<null | string>();
+  const products = useProducts();
 
   useEffect(() => {
     async function doWork() {
@@ -24,6 +26,12 @@ export const useAssistant = (data?: string) => {
           },
           {
             role: "system",
+            content: `This is the full inventory list: ${products
+              .map((p) => p.description)
+              .join(",")} `,
+          },
+          {
+            role: "system",
             content:
               "You should not answer any questions unrelated to your role at providing insights and trend analysis on the data.",
           },
@@ -34,7 +42,6 @@ export const useAssistant = (data?: string) => {
         ],
         model: "gpt-4o-mini",
       });
-      console.log(completion.choices[0].message.content);
       setInsight(completion.choices[0].message.content);
     }
 
